@@ -23,7 +23,7 @@ The init script was run to migrate data into a separate schema in github_prs_dev
 Data models were populated with the consumed data (`/app/db.py`)
 
 ## Step 5
-Data is queried via API endoints.
+Data is now ready for querying via API endoints.
 
 ## Using the application
 
