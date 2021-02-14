@@ -6,6 +6,8 @@ It comprises two parts:
 * Web app container
 * Postgesql container
 
+# Application overview
+
 ## Data flow
 
 ### Step 1. 
@@ -19,3 +21,14 @@ The init script was run to migrate data into a separate schema in github_prs_dev
 
 ### Step 4.
 Data models were populated with the consumed data (`/app/db.py`)
+
+## Step 5
+Data is queried via API endoints.
+
+## Using the application
+
+The aplication is started by running `docker-compose up`. After starting the project you shoulld be able to access these API endpoints:
+
+* http://localhost:8004/top (Top three most changed files in the current repo)
+* http://localhost:8004/stats (Min, Max, Avg durations calculated as time from creating a PR to merging it)
+* http://localhost:8004/docs (Contains Swagger docs)
