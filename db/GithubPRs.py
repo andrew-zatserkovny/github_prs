@@ -1,15 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 from github import Github
 import pandas as pd
 import time
-
-
-# In[ ]:
 
 
 token = 'some_token'
@@ -40,16 +31,16 @@ for pr in pull_requests:
     print(pr.number)
     pr_df = pr_df.append(
         {
-            'number': pr.number, 
-            'title': pr.title, 
+            'number': pr.number,
+            'title': pr.title,
             'url': pr.url,
             'created_at': pr.created_at,
             'merged_at': pr.merged_at,
             'state': pr.state
-        }, 
+        },
         ignore_index=True
     )
-        
+
     while True:
         try:
             pr_files = pr.get_files()
@@ -57,10 +48,10 @@ for pr in pull_requests:
                 print(pr_file.filename)
                 file_df = file_df.append(
                     {
-                        'pr_number': pr.number, 
-                        'filename': pr_file.filename, 
+                        'pr_number': pr.number,
+                        'filename': pr_file.filename,
                         'raw_url': pr_file.raw_url
-                    }, 
+                    },
                     ignore_index=True
                 )
         except Exception as e:
@@ -71,20 +62,5 @@ for pr in pull_requests:
         break
 
 
-# In[25]:
-
-
-pr_df.to_csv('d:\\pr_df.csv', index=False)
-
-
-# In[26]:
-
-
-file_df.to_csv('d:\\file_df.csv', index=False)
-
-
-# In[ ]:
-
-
-
-
+pr_df.to_csv('path/to/pr_df.csv', index=False)
+file_df.to_csv('path/to/file_df.csv', index=False)
