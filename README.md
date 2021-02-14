@@ -8,6 +8,11 @@ It comprises two parts:
 
 # Application overview
 
+## Technologies used
+
+* Fast API
+* PostgreSQL + Tortoise ORM
+
 ## Data flow
 
 ### Step 1. 
