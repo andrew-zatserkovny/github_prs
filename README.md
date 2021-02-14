@@ -27,7 +27,7 @@ Data is now ready for querying via API endoints.
 
 ## Using the application
 
-The application is started by running `docker-compose up`. After starting the project you shoulld be able to access these API endpoints:
+The application is started by running `docker-compose up`. After starting the project you should be able to access these API endpoints:
 
 * http://localhost:8004/top (Top three most changed files in the current repo)
 * http://localhost:8004/stats (Min, Max, Avg durations calculated as time from creating a PR to merging it)
