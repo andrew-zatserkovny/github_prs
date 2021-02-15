@@ -18,6 +18,9 @@ It comprises two parts:
 ### Step 1. 
 Before finding its way into the dockerized Postgresql DB the dump (`/db/dumps/airflow/*`) was downloaded with the help of Jupyter notebook script (`/db/GithubPRs.py`). Several iterations were needed to complete downloading due to GithubAPI restrictions.
 
+- The dump with pull requests contains 11147 records.
+- The dump with files has 123683 entries.
+
 ### Step 2.
 The dumps were then pushed into the PostgreSQL container (`/db/Dockerfile`).
 
