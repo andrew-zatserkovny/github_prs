@@ -51,6 +51,11 @@ The application is started by running `docker-compose up`. After starting the pr
   }
 ]
 ```
+
+Status: 200OK
+Time: 69 ms
+Size: 274 B
+
 * http://localhost:8004/stats (Min, Max, Avg durations calculated as time from creating a PR to merging it). The below response will be displayed:
 ```
 [
@@ -61,4 +66,9 @@ The application is started by running `docker-compose up`. After starting the pr
   }
 ]
 ```
+
+Status: 200OK
+Time: 27 ms
+Size: 179 B
+
 * http://localhost:8004/docs (Contains Swagger docs)
